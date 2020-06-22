@@ -1,0 +1,292 @@
+/*селектор {
+    свойство:значение;
+}*/
+body{
+    font-family: 'Roboto', sans-serif; /*  Сообщается, что на сайте используется шрифт робото, если у пользователя этот шрифт не поддерживается, загрузить любой другой*/
+
+    padding-top: 44px;
+}
+
+ *{
+     box-sizing: border-box; /* Правильно высчитывается ширина и высота элементов*/
+ }
+/* Общий контейнер веб-страницы */
+.container {
+
+    /*Контейнер имеет
+    1.рамку 1 пх, сплошная, красная, максимальная ширина 1200рх.
+    Для того чтобы контейнер(все его содержимое) был всегда по середине страницы - margin:auto. 
+    + одинаковые отступы по краям */
+    max-width: 1200px;
+    margin: auto;
+}
+ /* Шапка сайта*/
+.header {
+    display:flex; /*  Элементы выстроены в строку*/
+    align-items: center; /*Элементы должны стоять по вертикали по центру */
+    justify-content: space-between; /* Разбросать контент по краям, чтобы между ними было одинаковое расстояние */
+    
+    margin-bottom: 40px;
+}
+
+/* Общий класс для input-ов*/
+.input{
+
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9; /* Обводка*/
+    border-radius: 2px; /* Скругление по краям*/  
+    font-size: 16px; 
+    line-height: 24px;
+    padding: 8px;
+    padding-left: 35px; /*Отступ слева */
+    background-repeat: no-repeat; /*Чтобы подключенное изображение не повторялось */
+background-position: left 11px center; 
+}
+
+/*Поле поиска адреса доставки(section1)*/
+.input-address {
+flex:0.8; /*занимает 80% от свободного места ( для адаптива) */
+background-image:url(../img/home.svg);
+
+}
+
+/*Поле поиска ресторанов (section2)*/
+.input-search {
+    background-image:url(../img/search-logo.png);
+    width: 300px;
+}
+ /*Выравнивание заголовка и поле поиска в одну строку */
+.section-heading {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
+/* общий класс для button */
+.buttons {
+    display: flex;
+    align-items: center;
+
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px; /*отступ сверху и снизу  */
+    background: #FFFFFF;
+border: 1px solid #D9D9D9;
+box-sizing: border-box;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+border-radius: 2px;
+color: #595959;
+font-size: 16px; /*Размер шрифта и расположения  */
+line-height: 24px;
+}
+/* Кнопка "Войти" и*/
+.button-primary {  
+    background: #1890FF;
+    border: 1px solid #1890FF;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.button-icon {
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.button-text {
+    vertical-align: middle;
+}
+
+.promo {
+box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+background: #FFF1B8 url(../img/promo-img.jpeg) no-repeat top -100px right -170px / 940px; /*вставка картинки, значение, чтобы она не повторялась, выравнивание по верхнему правому краю */
+border-radius: 10px;
+padding: 68px 70px; /* отступы */
+margin-bottom: 56px; /*отступ вниз */
+
+}
+
+.promo-tittle {
+font-style: normal;
+font-weight: bold;
+font-size: 39px;
+line-height: 46px;
+color:#302c34;
+}
+
+.promo-text {
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+color:#302c34;
+max-width:538px;
+}
+
+.section-tittle {
+    font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 42px;
+margin:0; /*отключение всех лишних отступов */
+color: #000000;
+}
+
+/* Блок карточек*/
+.cards {
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between; /* значение, чтобы карточки раскидались относительно друг-друга */
+    flex-wrap: wrap; /*Если карочки не помещаются они переносились на новую строку */
+}
+.card {
+    background: #FFFFFF;
+box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+border-radius: 7px;
+margin-bottom: 30px;
+
+ overflow: hidden ;/* скрывает все, что находится за пределами карточки( в нашем случае скругление) */
+}
+
+.card-image {
+    width: 384px;
+height: 250px;
+object-fit: cover; /*  свойство, чтобы картинка сама обрезалась по указанному выше размеру */
+}
+
+.card-text {
+    padding-top: 20px;
+    padding-bottom: 35px;
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
+.card-heading {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-tittle {
+    margin:0;
+    font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 32px;
+}
+
+.card-tag {
+    font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 20px;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+background: #262626;
+border-radius: 2px;
+padding:1px 8px;
+}
+
+.card-info {
+    display:flex;
+    align-items: center;
+}
+
+.rating {
+margin-right: 26px;
+color: #FFC107;
+font-size:18px;
+line-height: 32px;
+}
+
+.price, .category {
+font-size: 18px;
+line-height: 32px;
+color: #8C8C8C;
+
+
+}
+
+.price {
+    margin-right: 10px;
+}
+
+.price:after {   /*Псевдоэлемент для класса прайс (та самая точка после цены) */ 
+    content: "";
+    width:5px;
+    height: 5px;
+    background-color: #8c8c8c;
+    display:inline-block;
+    vertical-align: middle;
+    border-radius:50%;
+    margin-left:10px;
+}
+
+.footer {
+    padding: 60px 47px;  /* Внутренний отступ сверху и снизу по 60 пх, слева и справа по 0 */
+}
+
+.footer-block {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    margin-left: 35px;
+    margin-right: auto;
+}
+.footer-link{
+    display:inline-block;
+    color:#595959;
+    text-decoration:none; /*убирается подчеркивание*/
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.footer-link:not(:last-child) {
+    margin-right: 15px;
+}
+
+.social-links{
+    display:flex;
+    align-items:center;
+}
+
+.social-link:not(:last-child){
+    margin-right: 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Подпись */
+.signature {
+
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                    0px -5px 35px rgba(221, 101, 101, 0.3);
+    
+}
